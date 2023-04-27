@@ -1,0 +1,26 @@
+print("Bienvenido a 'Puedo exentar?'")
+opciones = input("Escribe '2' si sabes la calificación de dos trimestres. Escribe '3' si sabes la calificación de los tres trimestres: ")
+opcion_seleccionada = int(opciones)
+if opcion_seleccionada == 2:
+    primer_promedio1 = float(input("Escribe tu promedio del primer trimestre: "))
+    segundo_promedio1 = float(input("Escribe tu promedio del segundo trimestre: "))
+    promedio_parcial = primer_promedio1 + segundo_promedio1
+    necesario = 25.5 - promedio_parcial
+    if necesario < 10.0:
+        print("Necesitas " + "%.1f" % necesario + " para exentar")
+    else:
+        print("Lo siento, ya no puedes exentar esta materia. Necesitarías " + str(necesario) + " puntos")
+elif opcion_seleccionada == 3:
+    primer_promedio2 = float(input("Escribe tu promedio del primer trimestre: "))
+    segundo_promedio2 = float(input("Escribe tu promedio del segundo trimestre: "))
+    tercer_promedio3 = float(input("Escribe tu promedio del tercer trimestre: "))
+    promedio_total = (primer_promedio2 + segundo_promedio2 + tercer_promedio3)/3
+    faltante = 8.5 - promedio_total
+    if promedio_total > 8.5:
+        print("Felicidades, exentaste con " + "%.1f" % promedio_total)
+    else:
+        print("Lo siento, no exentaste, te faltaron " + "%.1f" % faltante + " puntos")
+else:
+    print("Por favor escoge una opción válida")
+    
+   
